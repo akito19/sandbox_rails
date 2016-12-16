@@ -16,4 +16,16 @@ class UsersController < ApplicationController
     @group = current_user.group.find(params[:id])
     @group.destroy
   end
+
+  private
+
+  def abc
+    if true
+      puts 'abc'
+    end
+    v = 123
+    %w(bar foo xyz).each do |v|
+      puts v
+    end
+  end
 end
