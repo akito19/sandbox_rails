@@ -28,4 +28,8 @@ class UsersController < ApplicationController
       puts v
     end
   end
+
+  def gvar
+    $newgvar = 1
+  end
 end
