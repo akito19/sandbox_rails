@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @groups = User.all
+  end
+
   def show
     @group = current_user.group.find(params[:id])
   end
