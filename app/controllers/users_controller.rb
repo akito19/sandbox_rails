@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @group = current_user.group.find(params[:id])
   end
 
+  def index
+    @users = Users.all
+  end
+
   def edit
     @group = current_user.group.find(params[:id])
   end
