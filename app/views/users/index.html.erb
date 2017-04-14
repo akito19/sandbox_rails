@@ -1,3 +1,8 @@
 <div>
   <%= render :partial => 'some' %>
+  <% @groups.each do |group| %>
+    <div class="foo-class">
+      <% group %>
+    </div>
+  <% end %>
 </div>
