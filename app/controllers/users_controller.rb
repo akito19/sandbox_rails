@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     @group = current_user.group.find(params[:id])
   end
 
+  def index
+    @users = Users.all
+  end
   def update
     @group = current_user.group.find(params[:id])
     @group.update_attributes(params[:group])
