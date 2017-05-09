@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def edit
     @group = current_user.group.find(params[:id])
+    sample(@group)
   end
 
   def update
@@ -32,4 +33,16 @@ class UsersController < ApplicationController
   def gvar
     $newgvar = 1
   end
+  
+  protected
+    def sample(group)
+      group.map {  |v| v.foo.count }
+    end
+
+  def hoge
+    %i(une deux troi quattre cinq).each do |num|
+      p "num: #{num}"
+    end
+  end
+
 end
